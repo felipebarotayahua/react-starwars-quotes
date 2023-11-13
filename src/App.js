@@ -2,35 +2,10 @@
 import React from 'react';
 
 
-const App = () => {
-  const characters = [
-    {
-      name: 'Princess Leia',
-      quotes: [
-        'Lorem ipsum dior amet blah...',
-        'Lorem ipsum dior amet blah...',
-        'Lorem ipsum dior amet blah...',
-        'Lorem ipsum dior amet blah...',
-        'Lorem ipsum dior amet blah...',
-        'Lorem ipsum dior amet blah...',
-      ],
-    },
-    {
-      name: 'Obi Wan Kenobi',
-      quotes: [
-        'Lorem ipsum dior amet blah...',
-        'Lorem ipsum dior amet blah...',
-        'Lorem ipsum dior amet blah...',
-        'Lorem ipsum dior amet blah...',
-        'Lorem ipsum dior amet blah...',
-        'Lorem ipsum dior amet blah...',
-      ],
-    },
-  ];
-
+const App = ({ props }) => {
   return (
     <div className="container">
-      {characters.map((character, index) => (
+      {props.map((character, index) => (
         <div key={index} className="border rounded p-4 m-2">
           <div>
             <h1>{character.name}</h1>
